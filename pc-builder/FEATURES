@@ -1,0 +1,153 @@
+# Features
+
+1) Build PC
+    - CPU
+        - User Select Intel or AMD
+            - Family Core i9/Ryzen 7
+                - Model i9-9900/3700x
+        - Other information to include
+            - Memory Type DDR4
+            - Total L2 Cache
+            - Total L3 Cache
+            - Base Clock 3.6Ghz
+            - Max Boost Clock up to 4.4Ghz
+            - Number of cores
+            - Number of Threads
+            - Stock RAM speed 3200MHz - Motherboard controls RAM speed
+                    
+    - Motherboard
+        - Platform Intel/AMD
+            - Processor Socket LGA 1151/AM4
+                - Chipset Z390/X570
+                    - Form Factor ATX/mini-ATX
+                        - Brand Gigabyte/Asus
+        - Other information to include once selected
+            - Memory Type DDR4/DDR3
+                - MHz DDR4 4266(O.C)/2666
+            - Number of RAM slots 4/2
+            - Onboard Graphics supported or not
+            - Audio Realtek -- find out more about this
+            - Expansion slots
+                - PCIe
+                    - number of slots, PCI Express x16 slot, bit mode, standard (2 x PICI express x16 slot x16 mode, 4.0)
+                    - number of slots, M.2 socket CNVi wireless connection
+            - Storage
+                - M.2 socket
+                    -  Socket name, keyID, card measurements (width,width,length,length millimeters), interface, common use
+                        Socket 3, M Key, 2242/2260/2280/22110
+                - SATA
+                    - number of slows, SATA, Gb/s
+                        - x6 SATA 6Gb/s
+                - RAID support RAID 0, RAID 1, RAID 5, RAID 10
+                    - used for disk mirrioring or disk striping
+            - USB
+                - USB Version
+                    - number of ports, USB Type, USB version, Gen # support
+            - Internal I/O Connectors
+                - List of pin connectos such as 24 pin power connector
+            - Back Panel Connectors
+                - List of back panel connectors such as HDMI port, audio jack
+            - BIOS
+            - Operating System
+                - Which one it supports
+            - Multi Graphics Support
+                - CrossFire and SLI support
+    
+    - RAM
+        - Memory Size
+            - Memory Type
+                - Frequency
+                    - Manufacturer
+                        - Memory Series
+        -Other information to include once selected
+            - Compatiblity with motherboard chipset
+            - Heat Spreader
+            - Memory configuration
+            - Latency
+                -CL16,18,18,36
+            - Tested voltage
+            - SPD Voltage
+
+    - Graphics Processing Unit
+        - AMD/Nvidia
+            - Series RTX/GTX/Radeon
+                - Series Model 2080/1050/580/vii
+        - Other information to include once selected
+            - CUDA Cores/Stream Processor
+            - Base Clock frequency 1515/1400mhz
+            - Boost Clock Frequency 1710/1450mhz
+            - Memory Speed 14/4Gbps
+            - Memory Bandwidth 559GB/s or 1024GB/s
+            - Standard Memory configuration/Memory Type 8gb GDDR6/4Gbps HBM2
+            - Memory Interface Width/Memory Interface 256-bit/4096-bit
+            - Memory Bandwidth 448GB/s or 1024 GB/s
+            
+    - Cooling
+        - CPU Fans
+            - Brand
+                -  Series
+            - Other information to include once selected
+                - Fan Size
+                - Fan Speeds
+                - Noise Level
+                - Processor Socket Compatibility
+                - Heat Sink dimensions
+        - Case Fans
+            - Brand
+                - Series
+            - Other information to include once selected
+                - Fan Size
+                - Fan Speeds
+                - Noise Level
+                - Processor Socket Compatibility
+                - Heat Sink dimensions
+        - Liquid Cooling
+            - Brand
+                -  Series
+            - Other information to include once selected
+                - Socket Compatibility
+                - Radiator Size
+                -             
+    - Case
+        - Case Type
+            - Motherboard Support
+                - Brand
+        - Other information to include once selected
+            - Series
+            - Case Material
+            - Front ports
+            - dimensions        
+    - Power Supply Unit
+        - Maximum power
+            - Energy Efficiency
+                - Brand
+        - Other information to include once selected
+            - Modular
+            - warranty
+            - weight
+            - dimensions
+    - HDD
+        - Capacity
+            - Brand
+                - Series
+        - Other Information to include
+            - Rotation Speed
+            - Interface SATA III 6GB/s
+            - Buffer Size
+    - SSD
+        -Form Factor
+            - SATA III 2.5
+                - Capacity
+                    - Brand
+                        - Series
+            - M.2 NVMe
+                - Capacity
+                    - Brand
+                        - Series
+            - Other information to include once selected
+                - Max Sequential Read
+                - Max Sequential Write
+                - Interface M.2/SATA   
+2) Compare prices for individual parts and total
+    - prices for individual beside each card
+    - prices for total will be at bottom
