@@ -16,17 +16,6 @@ class App extends React.Component {
       "SSD",
       "PSU",
     ];
-    let prices = [
-      649.99,
-      234.08,
-      204.0,
-      199.99,
-      154.99,
-      800.0,
-      100.0,
-      255.0,
-      172.99,
-    ];
     return (
       <div className="App">
         <h1 className="app-header">PC Builder</h1>
