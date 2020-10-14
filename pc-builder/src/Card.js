@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { sortBy } from "lodash";
+import { sortBy, forEach } from "lodash";
 import CPU from "./CardComponents/CPU";
 import Motherboard from "./CardComponents/Motherboard";
 import RAM from "./CardComponents/RAM";
@@ -15,33 +15,76 @@ class Card extends React.Component {
     super(props);
     this.state = {
       processors: [],
+      amdProcessors: [],
+      intelProcessors: [],
       brand: [
-        { value: "AMD", label: "amd" },
-        { value: "Intel", label: "intel" },
+        { label: "AMD", value: "AMD" },
+        { label: "Intel", value: "Intel" },
       ],
+      amdprocessorLabels: [{ label: "", value: "" }],
+      intelProcessorsLabels: [{ label: "", value: "" }],
     };
   }
   componentDidMount() {
-    fetch("http://localhost:8080/amdprocessors")
-      .then((res) => res.json())
-      .then((data) => {
+    Promise.all([
+      fetch("http://localhost:8080/amdprocessors"),
+      fetch("http://localhost:8080/intelprocessors"),
+    ])
+      .then(([res1, res2]) => {
+        return Promise.all([res1.json(), res2.json()]);
+      })
+      .then(([res1, res2]) => {
         this.setState({
-          processors: sortBy(data, [
+          amdProcessors: sortBy(res1, [
             function (processor) {
               return processor.Model;
             },
           ]),
         });
+        this.setState({
+          intelProcessors: sortBy(res2, [
+            function (processor) {
+              return processor.name;
+            },
+          ]),
+        });
+
+        this.initializeLabels();
       })
       .catch((err) => {
         console.log("Error on mounting function " + err);
       });
   }
   check() {
-    const proc = this.state.processors.map((procs) => {
-      return procs.Model;
+    console.log("check " + this.state.amdProcessors);
+  }
+  initializeLabels() {
+    let stateArr = [];
+    let stateArr2 = [];
+    this.state.amdProcessors.forEach((data) => {
+      let newStateArr = { label: "", value: "" };
+      newStateArr.label = data.Model;
+      newStateArr.value = data.Model;
+      stateArr.push(newStateArr);
     });
-    return proc;
+    this.state.intelProcessors.forEach((data) => {
+      let newStateArr = { label: "", value: "" };
+      newStateArr.label = data.name;
+      newStateArr.value = data.name;
+      stateArr2.push(newStateArr);
+    });
+    this.setState({
+      amdprocessorLabels: stateArr,
+    });
+    this.setState({
+      intelProcessorsLabels: stateArr2,
+    });
+    this.setState({
+      processors: [
+        ...this.state.amdprocessorLabels,
+        ...this.state.intelProcessorsLabels,
+      ],
+    });
   }
   selectComp() {
     switch (this.props.comp) {
@@ -51,7 +94,7 @@ class Card extends React.Component {
             value1={this.state.brand}
             value2={this.state.series}
             value3={this.state.generation}
-            value4={this.check()}
+            value4={this.state.processors}
           />
         );
       case "Motherboard":
@@ -86,6 +129,7 @@ class Card extends React.Component {
       <div className="col-sm-4" style={{ marginBottom: "2em" }}>
         <div className="card">
           <h4 className="card-header">{this.props.comp}</h4>
+          {this.check()}
           {this.selectComp()}
         </div>
       </div>
