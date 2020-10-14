@@ -1,5 +1,8 @@
 # PCBuilder
 
+Once API is completed, the application will communicate with the API <br>
+Link for API: https://github.com/DannyNguyenCode/computerAPI
+
 ## Website features
 
 This website will allow users to select computer components and compare prices. <br>
@@ -18,7 +21,7 @@ The website is built using **Node.js** as the back end. <br><br>
 
 #### Data <br>
 
-A database is set up with the computer components using **Web Scraper** Firefox plugin. <br><br>
+A data base will be communicated using componentsAPI. **API will be up and running once completed** <br><br>
 
 ---
 
