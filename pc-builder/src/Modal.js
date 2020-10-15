@@ -19,7 +19,10 @@ export const Modal = ({ component = 'No component provided' }) => (
       aria-labelledby='exampleModalCenterTitle'
       aria-hidden='true'
     >
-      <div className='modal-dialog modal-dialog-centered' role='document'>
+      <div
+        className='modal-dialog modal-dialog-centered modal-lg'
+        role='document'
+      >
         <div className='modal-content'>
           <div className='modal-header'>
             <h5 className='modal-title' id='exampleModalLongTitle'>
