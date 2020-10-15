@@ -28,13 +28,13 @@ class App extends React.Component {
               <div className='row'>
                 {computerParts.map((components, index) => {
                   return (
-                    <div className='col-md-4' key={index}>
+                    <div className='col-md-4' key={index} id={index}>
                       <div className='card bg-light mb-3'>
                         <div className='card-header'>{components}</div>
                         <div className='card-body'>
-                          <Form />
+                          <Form component={components} />
                           <br />
-                          <Modal />
+                          <Modal component={components} />
                         </div>
                       </div>
                     </div>
