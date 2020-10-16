@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Form } from './Form';
 import { Modal } from './Modal';
+import { Table } from './Table';
 
 import Card from './Card';
 import PriceRundown from './PriceRundown';
@@ -18,7 +19,9 @@ class App extends React.Component {
     ssdOption: 'Placeholder8',
     psuOption: 'Placeholder9',
   };
-
+  handleSelect = (option) => {
+    this.setState({ cpuOption: option });
+  };
   render() {
     let computerParts = [
       'Central Processing Unit',
@@ -38,14 +41,17 @@ class App extends React.Component {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-md'>
-              <div className='row'>
+              <div className='row' id='card-wrapper'>
                 {computerParts.map((components, index) => {
                   return (
                     <div className='col-md-4' key={index} id={index}>
                       <div className='card bg-light mb-3'>
                         <div className='card-header'>{components}</div>
                         <div className='card-body'>
-                          <Form component={components} />
+                          <Form
+                            component={components}
+                            onSelect={this.handleSelect}
+                          />
                           <br />
                           <Modal component={components} />
                         </div>
@@ -60,30 +66,25 @@ class App extends React.Component {
           <div className='row d-flex justify-content-center'>
             <h1 className='pricerundownheader'>Price Rundown</h1>
           </div>
-          <div className='row'>
+          <div className='row' id='table'>
             {/*Price run down table */}
             <div className='col-md'>
-              <table class='table table-sm table-striped table-hover table-bordered'>
-                <thead>
-                  <tr>
-                    <th scope='col'>Part</th>
-                    <th scope='col'>Name</th>
-                    <th scope='col'>Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {computerParts.map((component, index) => {
-                    return (
-                      <tr key={index}>
-                        <th scope='row'>{component}</th>
-                        <td>{this.state.cpuOption}</td>
-                        <td>$74.99</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+              <Table
+                computerParts={computerParts}
+                cpuOption={this.state.cpuOption}
+                moboOption={this.state.moboOption}
+                ramOption={this.state.ramOption}
+                caseOption={this.state.caseOption}
+                coolingOption={this.state.coolingOption}
+                gpuOption={this.state.gpuOption}
+                hddOption={this.state.hddOption}
+                ssdOption={this.state.ssdOption}
+                psuOption={this.state.psuOption}
+              />
             </div>
+          </div>
+          <div className='row' id='total'>
+            <div className='col-md'></div>
           </div>
         </div>
       </div>
