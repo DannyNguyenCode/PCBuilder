@@ -12,7 +12,7 @@ export const Table = ({
   ssdOption,
   psuOption,
 }) => (
-  <table class='table table-sm table-striped table-hover table-bordered'>
+  <table className='table table-sm table-striped table-hover table-bordered'>
     <thead>
       <tr>
         <th scope='col'>Part</th>
