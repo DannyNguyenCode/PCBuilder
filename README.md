@@ -11,7 +11,7 @@ Basically, if you select a component the algorithm will allow you to select othe
 
 ### Back-End
 
-The website is built using **Node.js** as the back end. <br><br>
+The website is built using **Node.js** as the back end. <br>
 
 #### Database
 
