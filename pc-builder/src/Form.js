@@ -17,6 +17,7 @@ class Form extends React.Component {
     this.state = { option: '', price: '', search: null };
     this.handleChange = this.handleChange.bind(this);
   }
+
   handleChange(e) {
     let option = optionsTest.find(
       ({ name }) => name.toLowerCase() === e.target.value
@@ -28,10 +29,12 @@ class Form extends React.Component {
       this.setState({ option: option.name, price: option.price });
     }
   }
+
   searchSpace = (event) => {
     let keyword = event.target.value;
     this.setState({ search: keyword });
   };
+
   render() {
     const options = optionsTest
       .filter((data) => {
@@ -50,6 +53,7 @@ class Form extends React.Component {
           </option>
         );
       });
+
     return (
       <form className='form-inline d-flex justify-content-center'>
         <input
