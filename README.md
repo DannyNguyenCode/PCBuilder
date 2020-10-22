@@ -13,15 +13,15 @@ Basically, if you select a component the algorithm will allow you to select othe
 
 The website is built using **Node.js** as the back end. <br><br>
 
----
-
-### Database
+#### Database
 
 **MongoDB** will be used as the database. <br>
 
 #### Data <br>
 
-A data base will be communicated using componentsAPI. **API will be up and running once completed** <br><br>
+Communication with the database will be accomplished using NodeJS and express.<br>
+Data is hosted on: https://floating-brushlands-50137.herokuapp.com/
+<br><br>
 
 ---
 
