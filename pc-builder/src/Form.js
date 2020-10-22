@@ -14,7 +14,7 @@ let optionsTest = [
 class Form extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { option: '', price: '' };
+    this.state = { option: '', price: '', search: null };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
@@ -28,14 +28,37 @@ class Form extends React.Component {
       this.setState({ option: option.name, price: option.price });
     }
   }
+  searchSpace = (event) => {
+    let keyword = event.target.value;
+    this.setState({ search: keyword });
+  };
   render() {
+    const options = optionsTest
+      .filter((data) => {
+        if (this.state.search == null) {
+          return data;
+        } else if (
+          data.name.toLowerCase().includes(this.state.search.toLowerCase())
+        ) {
+          return data;
+        }
+      })
+      .map((data) => {
+        return (
+          <option id={data.name.toLowerCase()} value={data.name.toLowerCase()}>
+            {data.name}
+          </option>
+        );
+      });
     return (
       <form className='form-inline d-flex justify-content-center'>
         <input
           className='form-control mr-sm-2 text-center'
+          id='search'
           type='search'
           placeholder='Search to Filter'
           aria-label='Search'
+          onChange={(e) => this.searchSpace(e)}
         />
         <div className='form-group'>
           <label htmlFor='name'>Name</label>
@@ -44,18 +67,8 @@ class Form extends React.Component {
             id='name'
             onChange={this.handleChange}
           >
-            <option defaultValue>Please select an option</option>
-            {optionsTest.map((option, index) => {
-              return (
-                <option
-                  key={index}
-                  id={option.name.toLowerCase()}
-                  value={option.name.toLowerCase()}
-                >
-                  {option.name}
-                </option>
-              );
-            })}
+            <option defaultValue>Please select option</option>
+            {options}
           </select>
 
           <label htmlFor='price'>Price</label>
