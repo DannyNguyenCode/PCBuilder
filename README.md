@@ -1,6 +1,6 @@
 # PCBuilder
 
-Once API is completed, the application will communicate with the API <br>
+API is hosted on Heroku at: https://floating-brushlands-50137.herokuapp.com/ <br>
 Link for API: https://github.com/DannyNguyenCode/computerAPI
 
 ## Website features
