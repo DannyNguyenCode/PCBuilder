@@ -7,6 +7,26 @@
   max-height: 100%;
 }
 
+@media only screen and (min-width: 992px) {
+  /* width for form select and input tags*/
+  .form-inline .form-group {
+    width: 70% !important;
+  }
+  #search {
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form-inline .form-group {
+    width: 100% !important;
+  }
+}
+label {
+  margin-top: 1em;
+}
+
+/* width for whole form tag*/
 .form-inline .form-control {
   width: 100% !important;
 }
