@@ -8,7 +8,9 @@ Link for API: https://github.com/DannyNguyenCode/computerAPI
 This website will allow users to select computer components and compare prices. <br>
 Will display a price, which includes individual price of each component and total price.<br><br>
 At the end of the page, recommended videos will show others who have similar builds. <br>
-Based on the central processing unit, graphics processing unit, and motherboard the user has chosen
+Based on the central processing unit, graphics processing unit, and motherboard the user has chosen.<br><br>
+
+---
 
 ### Back-End
 
