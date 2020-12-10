@@ -1,17 +1,29 @@
-import React from "react";
-import Select from "react-select";
-class SSD extends React.Component {
-  render() {
-    return (
-      <div className="card-body">
-        <h4 className="card-title">Brand</h4>
-        <Select options={this.props.value1} />
-        <h4 className="card-title">Series</h4>
-        <Select options={this.props.value2} />
-        <h4 className="card-title">Generation</h4>
-        <Select options={this.props.value3} />
-      </div>
-    );
-  }
+import React, { useState, useEffect, useCallback } from 'react';
+import Card from '../Card';
+
+function SSD({ parentCallback }) {
+  const [option, setOptions] = useState(null);
+  const handleCallBack = useCallback(
+    (data, price) => {
+      parentCallback(data, 'ssd', price);
+      data.preventDefault();
+    },
+    [parentCallback]
+  );
+  const url = 'https://floating-brushlands-50137.herokuapp.com/nvmessds';
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setOptions(data));
+  }, [url]);
+
+  return (
+    <Card
+      header='Solid State Drive'
+      data={option}
+      componentCallBack={handleCallBack}
+    />
+  );
 }
+
 export default SSD;

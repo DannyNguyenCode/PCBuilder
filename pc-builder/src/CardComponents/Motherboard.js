@@ -1,17 +1,29 @@
-import React from "react";
-import Select from "react-select";
-class Motherboard extends React.Component {
-  render() {
-    return (
-      <div className="card-body">
-        <h4 className="card-title">Platform</h4>
-        <Select options={this.props.value1} />
-        <h4 className="card-title">Chipset Socket</h4>
-        <Select options={this.props.value2} />
-        <h4 className="card-title">Manufacturer</h4>
-        <Select options={this.props.value3} />
-      </div>
-    );
-  }
+import React, { useState, useEffect, useCallback } from 'react';
+import Card from '../Card';
+
+function Motherboard({ parentCallback }) {
+  const [option, setOptions] = useState(null);
+  const handleCallBack = useCallback(
+    (data, price) => {
+      parentCallback(data, 'mobo', price);
+      data.preventDefault();
+    },
+    [parentCallback]
+  );
+  const url = 'https://floating-brushlands-50137.herokuapp.com/amdmobos';
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setOptions(data));
+  }, [url]);
+
+  return (
+    <Card
+      header='Motherboard'
+      data={option}
+      componentCallBack={handleCallBack}
+    />
+  );
 }
+
 export default Motherboard;

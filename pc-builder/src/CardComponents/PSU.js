@@ -1,17 +1,29 @@
-import React from "react";
-import Select from "react-select";
-class PSU extends React.Component {
-  render() {
-    return (
-      <div className="card-body">
-        <h4 className="card-title">Brand</h4>
-        <Select options={this.props.value1} />
-        <h4 className="card-title">Series</h4>
-        <Select options={this.props.value2} />
-        <h4 className="card-title">Generation</h4>
-        <Select options={this.props.value3} />
-      </div>
-    );
-  }
+import React, { useState, useEffect, useCallback } from 'react';
+import Card from '../Card';
+
+function PSU({ parentCallback }) {
+  const [option, setOptions] = useState(null);
+  const handleCallBack = useCallback(
+    (data, price) => {
+      parentCallback(data, 'psu', price);
+      data.preventDefault();
+    },
+    [parentCallback]
+  );
+  const url = 'https://floating-brushlands-50137.herokuapp.com/psus';
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setOptions(data));
+  }, [url]);
+
+  return (
+    <Card
+      header='Power Supply Unit'
+      data={option}
+      componentCallBack={handleCallBack}
+    />
+  );
 }
+
 export default PSU;
