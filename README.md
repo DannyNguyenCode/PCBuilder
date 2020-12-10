@@ -29,3 +29,7 @@ Data is hosted on: https://floating-brushlands-50137.herokuapp.com/
 ### Front-End
 
 **React** will be used as the front-end framework. <br>
+
+### Responsive Design
+
+**Bootstrap 4** is used to create and responsive and accessible webpage. <br>
