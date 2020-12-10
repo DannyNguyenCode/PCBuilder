@@ -6,8 +6,9 @@ Link for API: https://github.com/DannyNguyenCode/computerAPI
 ## Website features
 
 This website will allow users to select computer components and compare prices. <br>
-By selecting a piece, the algorithm will determine if the components are compatible and display the pieces for selection. <br><br>
-Basically, if you select a component the algorithm will allow you to select other components that are only compatible with the recent piece you have selected. Will also display a price, which includes individual price of each component and total price.<br><br>
+Will display a price, which includes individual price of each component and total price.<br><br>
+At the end of the page, recommended videos will show others who have similar builds. <br>
+Based on the central processing unit, graphics processing unit, and motherboard the user has chosen
 
 ### Back-End
 
