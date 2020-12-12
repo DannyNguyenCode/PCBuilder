@@ -10,20 +10,21 @@ import GPU from './CardComponents/GPU';
 import HDD from './CardComponents/HDD';
 import SSD from './CardComponents/SSD';
 import PSU from './CardComponents/PSU';
+import YoutubeSearch from './YoutubeSearch';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cpuOptions: 'Please Select Central Processing Unit to populate table',
-      motherboardsOptions: 'Please Select Motherboard to populate table',
-      ramsOptions: 'Please Select Random Access Memory to populate table',
-      casesOptions: 'Please Select Cases to populate table',
-      coolingsOptions: 'Please Select Cooling to populate table',
-      gpusOptions: 'Please Select Graphics Processing Unit to populate table',
-      hddsOptions: 'Please Select Hard Disk Drive to populate table',
-      ssdsOptions: 'Please Select Solid State Drive to populate table',
-      psusOptions: 'Please Select Power Supply Unit to populate table',
+      cpuOptions: '',
+      motherboardsOptions: '',
+      ramsOptions: '',
+      casesOptions: '',
+      coolingsOptions: '',
+      gpusOptions: '',
+      hddsOptions: '',
+      ssdsOptions: '',
+      psusOptions: '',
       cpuPrice: '$00.00',
       motherboardsPrice: '$00.00',
       ramsPrice: '$00.00',
@@ -182,18 +183,14 @@ class App extends React.Component {
             </div>
           </div>
           {/* row mx-0 mb-2 justify-content-center */}
-          <div className='row mx-0 text-center'>
-            <div className='embed-responsive embed-responsive-16by9'>
-              <iframe
-                title='Sample'
-                className='embed-responsive-item'
-                src='https://www.youtube.com/embed/jLVGL7aAYgY'
-                frameBorder='0'
-                allowFullScreen
-              ></iframe>
-            </div>
+          <div className='row mx-0 text-center row row-cols-sm-1 row-cols-md-2 justify-content-center'>
+            <YoutubeSearch
+              cpu={this.state.cpuOptions}
+              motherboard={this.state.motherboardsOptions}
+              gpu={this.state.gpusOptions}
+            />
           </div>
-          {/* row mx-0 text-center */}
+          {/* row mx-0 text-center row row-cols-sm-1 row-cols-md-2 justify-content-center */}
         </div>
         {/* container */}
       </div> /* App */
