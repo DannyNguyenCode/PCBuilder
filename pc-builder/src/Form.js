@@ -27,6 +27,7 @@ class Form extends React.Component {
             className='form-control'
             id={selectid + 'Name'}
             onChange={this.onTrigger}
+            style={{ textAlign: 'center' }}
           >
             <option defaultValue>Please select option</option>
             {data &&
