@@ -26,10 +26,6 @@ class Card extends React.Component {
             />
           </div>
           {/* card-body */}
-          <div className='card-footer'>
-            <Modal component={this.props.header} />
-          </div>
-          {/* card-footer */}
         </div>
         {/* card */}
       </div>
