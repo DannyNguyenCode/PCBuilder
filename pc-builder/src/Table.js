@@ -85,15 +85,15 @@ export const Table = ({
         <td>Total Price of All Components Are:</td>
         <td>
           $
-          {Number(cpuPrice.substring(1)) +
-            Number(motherboardsPrice.substring(1)) +
-            Number(ramsPrice.substring(1)) +
-            Number(casesPrice.substring(1)) +
-            Number(coolingsPrice.substring(1)) +
-            Number(gpusPrice.substring(1)) +
-            Number(hddsPrice.substring(1)) +
-            Number(ssdsPrice.substring(1)) +
-            Number(psusPrice.substring(1))}
+          {Number.parseFloat(cpuPrice.substring(1)) +
+            Number.parseFloat(motherboardsPrice.substring(1)) +
+            Number.parseFloat(ramsPrice.substring(1)) +
+            Number.parseFloat(casesPrice.substring(1)) +
+            Number.parseFloat(coolingsPrice.substring(1)) +
+            Number.parseFloat(gpusPrice.substring(1)) +
+            Number.parseFloat(hddsPrice.substring(1)) +
+            Number.parseFloat(ssdsPrice.substring(1)) +
+            Number.parseFloat(psusPrice.substring(1))}
         </td>
       </tr>
     </tbody>
