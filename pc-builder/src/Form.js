@@ -34,6 +34,9 @@ class Form extends React.Component {
               data.map((data, index) => {
                 return (
                   <option
+                    data-toggle='tooltip'
+                    data-container='#tooltip_container'
+                    title={data.name}
                     key={index}
                     id={data.name.toLowerCase()}
                     value={data.name.toLowerCase()}
@@ -43,6 +46,7 @@ class Form extends React.Component {
                 );
               })}
           </select>
+          <div id='tooltip_container'></div>
         </div>
         {/* form-group */}
         <div className='form-group'>
