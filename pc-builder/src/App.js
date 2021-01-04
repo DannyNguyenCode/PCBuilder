@@ -10,7 +10,6 @@ import GPU from './CardComponents/GPU';
 import HDD from './CardComponents/HDD';
 import SSD from './CardComponents/SSD';
 import PSU from './CardComponents/PSU';
-import YoutubeSearch from './YoutubeSearch';
 
 class App extends React.Component {
   constructor(props) {
@@ -177,20 +176,6 @@ class App extends React.Component {
             />
           </div>
           {/* row mx-0 text-center */}
-          <div className='row mx-0 mb-2 justify-content-center'>
-            <div className='h4' id='recommendedvids'>
-              Recommended Videos
-            </div>
-          </div>
-          {/* row mx-0 mb-2 justify-content-center */}
-          <div className='row mx-0 text-center row-cols-sm-1 row-cols-md-2 justify-content-center'>
-            <YoutubeSearch
-              cpu={this.state.cpuOptions}
-              motherboard={this.state.motherboardsOptions}
-              gpu={this.state.gpusOptions}
-            />
-          </div>
-          {/* row mx-0 text-center row row-cols-sm-1 row-cols-md-2 justify-content-center */}
         </div>
         {/* container */}
       </div> /* App */
