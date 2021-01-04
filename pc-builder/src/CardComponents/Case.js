@@ -4,8 +4,8 @@ import Card from '../Card';
 function Case({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'case', price);
+    (data, name, price) => {
+      parentCallback(data, 'case', name, price);
       data.preventDefault();
     },
     [parentCallback]

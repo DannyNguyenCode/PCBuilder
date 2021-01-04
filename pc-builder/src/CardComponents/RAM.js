@@ -4,8 +4,8 @@ import Card from '../Card';
 function RAM({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'ram', price);
+    (data, name, price) => {
+      parentCallback(data, 'ram', name, price);
       data.preventDefault();
     },
     [parentCallback]

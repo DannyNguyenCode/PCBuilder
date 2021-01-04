@@ -4,8 +4,8 @@ import Card from '../Card';
 function GPU({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'gpu', price);
+    (data, name, price) => {
+      parentCallback(data, 'gpu', name, price);
       data.preventDefault();
     },
     [parentCallback]

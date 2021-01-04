@@ -4,8 +4,8 @@ import Card from '../Card';
 function CPU({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'cpu', price);
+    (data, name, price) => {
+      parentCallback(data, 'cpu', name, price);
       data.preventDefault();
     },
     [parentCallback]

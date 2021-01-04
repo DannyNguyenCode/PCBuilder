@@ -4,8 +4,8 @@ import Card from '../Card';
 function Motherboard({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'mobo', price);
+    (data, name, price) => {
+      parentCallback(data, 'mobo', name, price);
       data.preventDefault();
     },
     [parentCallback]

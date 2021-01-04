@@ -4,8 +4,8 @@ import Card from '../Card';
 function PSU({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'psu', price);
+    (data, name, price) => {
+      parentCallback(data, 'psu', name, price);
       data.preventDefault();
     },
     [parentCallback]

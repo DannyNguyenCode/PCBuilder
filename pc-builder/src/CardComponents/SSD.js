@@ -4,8 +4,8 @@ import Card from '../Card';
 function SSD({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'ssd', price);
+    (data, name, price) => {
+      parentCallback(data, 'ssd', name, price);
       data.preventDefault();
     },
     [parentCallback]

@@ -4,8 +4,8 @@ import Card from '../Card';
 function Cooling({ parentCallback }) {
   const [option, setOptions] = useState(null);
   const handleCallBack = useCallback(
-    (data, price) => {
-      parentCallback(data, 'cooling', price);
+    (data, name, price) => {
+      parentCallback(data, 'cooling', name, price);
       data.preventDefault();
     },
     [parentCallback]
