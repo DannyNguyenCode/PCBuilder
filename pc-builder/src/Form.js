@@ -12,9 +12,10 @@ class Form extends React.Component {
     );
     if (option === undefined) {
       this.setState({ price: 'Select Name for Price' });
+      this.props.cardCallBack(event, '', '$00.00');
     } else {
       this.setState({ price: option.price });
-      this.props.cardCallBack(event, option.price);
+      this.props.cardCallBack(event, option.name, option.price);
     }
   };
   render() {
