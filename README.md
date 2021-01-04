@@ -1,7 +1,7 @@
 # PCBuilder
 
 API is hosted on Heroku at: https://floating-brushlands-50137.herokuapp.com/ <br>
-Link for API: https://github.com/DannyNguyenCode/computerAPI
+Link for API source code: https://github.com/DannyNguyenCode/computerAPI
 
 ## How to run
 
@@ -32,15 +32,15 @@ Based on the central processing unit, graphics processing unit, and motherboard 
 
 ### Back-End
 
-The website is built using **Node.js** as the back end. <br>
+The web service was built using **Node.js** as the back end. <br>
 
 #### Database
 
-**MongoDB** will be used as the database. <br>
+**MongoDB** was used to hold the data in a database. <br>
 
 #### Data <br>
 
-Communication with the database will be accomplished using NodeJS and express.<br>
+**NodeJS and express** was used to communicate with the database.<br>
 Data is hosted on: https://floating-brushlands-50137.herokuapp.com/
 <br><br>
 
@@ -48,8 +48,8 @@ Data is hosted on: https://floating-brushlands-50137.herokuapp.com/
 
 ### Front-End
 
-**React** will be used as the front-end framework. <br>
+**React** was used as the front-end framework. <br>
 
 ### Responsive Design
 
-**Bootstrap 4** is used to create and responsive and accessible webpage. <br>
+**Bootstrap 4** was used to create and responsive and accessible webpage. <br>
