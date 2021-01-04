@@ -1,10 +1,5 @@
 import React from 'react';
-/* do media queries for max and min width of each cell td
-          style={{
-            wordWrap: 'break-word',
-            minWidth: 200 + 'px',
-            maxWidth: 200 + 'px',
-          }}*/
+
 export const Table = ({
   computerParts,
   cpuOption,
