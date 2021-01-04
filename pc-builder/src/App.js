@@ -35,31 +35,31 @@ class App extends React.Component {
       psusPrice: '$00.00',
     };
   }
-  handleCallback = (name, component, price) => {
+  handleCallback = (name, component, optionName, price) => {
     if (component === 'cpu') {
-      this.setState({ cpuOptions: name.target.value, cpuPrice: price });
+      this.setState({ cpuOptions: optionName, cpuPrice: price });
     } else if (component === 'mobo') {
       this.setState({
-        motherboardsOptions: name.target.value,
+        motherboardsOptions: optionName,
         motherboardsPrice: price,
       });
     } else if (component === 'ram') {
-      this.setState({ ramsOptions: name.target.value, ramsPrice: price });
+      this.setState({ ramsOptions: optionName, ramsPrice: price });
     } else if (component === 'case') {
-      this.setState({ casesOptions: name.target.value, casesPrice: price });
+      this.setState({ casesOptions: optionName, casesPrice: price });
     } else if (component === 'cooling') {
       this.setState({
-        coolingsOptions: name.target.value,
+        coolingsOptions: optionName,
         coolingsPrice: price,
       });
     } else if (component === 'gpu') {
-      this.setState({ gpusOptions: name.target.value, gpusPrice: price });
+      this.setState({ gpusOptions: optionName, gpusPrice: price });
     } else if (component === 'hdd') {
-      this.setState({ hddsOptions: name.target.value, hddsPrice: price });
+      this.setState({ hddsOptions: optionName, hddsPrice: price });
     } else if (component === 'ssd') {
-      this.setState({ ssdsOptions: name.target.value, ssdsPrice: price });
+      this.setState({ ssdsOptions: optionName, ssdsPrice: price });
     } else if (component === 'psu') {
-      this.setState({ psusOptions: name.target.value, psusPrice: price });
+      this.setState({ psusOptions: optionName, psusPrice: price });
     }
     name.persist();
     name.preventDefault();
@@ -105,9 +105,6 @@ class App extends React.Component {
                 </a>
                 <a className='nav-item nav-link' href='#pricerundown'>
                   Price Rundown
-                </a>
-                <a className='nav-item nav-link' href='#recommendedvids'>
-                  Recommended Videos
                 </a>
               </div>
               {/* navbar-nav */}
