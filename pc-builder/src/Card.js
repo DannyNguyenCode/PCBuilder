@@ -7,8 +7,8 @@ class Card extends React.Component {
     this.state = {};
     this.onTrigger = this.onTrigger.bind(this);
   }
-  onTrigger = (data, price) => {
-    this.props.componentCallBack(data, price);
+  onTrigger = (data, name, price) => {
+    this.props.componentCallBack(data, name, price);
     data.preventDefault();
   };
   render() {
