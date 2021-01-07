@@ -31,47 +31,47 @@ export const Table = ({
     </thead>
     <tbody>
       <tr>
-        <th scope='row'>{computerParts[0]}</th>
+        <th scope='row'>{computerParts[0][0]}</th>
         <td>{cpuOption}</td>
         <td>{cpuPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[1]}</th>
+        <th scope='row'>{computerParts[1][0]}</th>
         <td>{moboOption}</td>
         <td>{motherboardsPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[2]}</th>
+        <th scope='row'>{computerParts[2][0]}</th>
         <td>{ramOption}</td>
         <td>{ramsPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[3]}</th>
+        <th scope='row'>{computerParts[3][0]}</th>
         <td>{caseOption}</td>
         <td>{casesPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[4]}</th>
+        <th scope='row'>{computerParts[4][0]}</th>
         <td>{coolingOption}</td>
         <td>{coolingsPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[5]}</th>
+        <th scope='row'>{computerParts[5][0]}</th>
         <td>{gpuOption}</td>
         <td>{gpusPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[6]}</th>
+        <th scope='row'>{computerParts[6][0]}</th>
         <td>{hddOption}</td>
         <td>{hddsPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[7]}</th>
+        <th scope='row'>{computerParts[7][0]}</th>
         <td>{ssdOption}</td>
         <td>{ssdsPrice}</td>
       </tr>
       <tr>
-        <th scope='row'>{computerParts[8]}</th>
+        <th scope='row'>{computerParts[8][0]}</th>
         <td>{psuOption}</td>
         <td>{psusPrice}</td>
       </tr>
