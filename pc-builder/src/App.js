@@ -1,15 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Table } from './Table';
-import CPU from './CardComponents/CPU';
-import Motherboard from './CardComponents/Motherboard';
-import RAM from './CardComponents/RAM';
-import Case from './CardComponents/Case';
-import Cooling from './CardComponents/Cooling';
-import GPU from './CardComponents/GPU';
-import HDD from './CardComponents/HDD';
-import SSD from './CardComponents/SSD';
-import PSU from './CardComponents/PSU';
+import Components from './Components';
 
 class App extends React.Component {
   constructor(props) {
@@ -66,15 +58,55 @@ class App extends React.Component {
   };
   render() {
     const computerParts = [
-      'Central Processing Unit',
-      'Motherboard',
-      'Random Access Memory',
-      'Case',
-      'Cooling',
-      'Graphics Processing Unit',
-      'Hard Disk Drive',
-      'Solid State Drive',
-      'Power Supply Unit',
+      [
+        'Central Processing Unit',
+        'https://floating-brushlands-50137.herokuapp.com/amdprocessors',
+        'cpu',
+      ],
+
+      [
+        'Motherboard',
+        'https://floating-brushlands-50137.herokuapp.com/amdmobos',
+        'mobo',
+      ],
+
+      [
+        'Random Access Memory',
+        'https://floating-brushlands-50137.herokuapp.com/ddr4rams',
+        'ram',
+      ],
+
+      ['Case', 'https://floating-brushlands-50137.herokuapp.com/cases', 'case'],
+
+      [
+        'Cooling',
+        'https://floating-brushlands-50137.herokuapp.com/cpufansheatsinks',
+        'cooling',
+      ],
+
+      [
+        'Graphics Processing Unit',
+        'https://floating-brushlands-50137.herokuapp.com/nvidiagpus',
+        'gpu',
+      ],
+
+      [
+        'Hard Disk Drive',
+        'https://floating-brushlands-50137.herokuapp.com/harddiskdrives',
+        'hdd',
+      ],
+
+      [
+        'Solid State Drive',
+        'https://floating-brushlands-50137.herokuapp.com/nvmessds',
+        'ssd',
+      ],
+
+      [
+        'Power Supply Unit',
+        'https://floating-brushlands-50137.herokuapp.com/psus',
+        'psu',
+      ],
     ];
 
     return (
@@ -126,21 +158,15 @@ class App extends React.Component {
           </div>
           {/* row mx-0 mb-2 mt-4 justify-content-center */}
           <div className='row row-cols-sm-1 row-cols-md-2 row-cols-lg-3'>
-            <CPU key={computerParts[0]} parentCallback={this.handleCallback} />
-            <Motherboard
-              key={computerParts[1]}
-              parentCallback={this.handleCallback}
-            />
-            <RAM key={computerParts[2]} parentCallback={this.handleCallback} />
-            <Case key={computerParts[3]} parentCallback={this.handleCallback} />
-            <Cooling
-              key={computerParts[4]}
-              parentCallback={this.handleCallback}
-            />
-            <GPU key={computerParts[5]} parentCallback={this.handleCallback} />
-            <HDD key={computerParts[6]} parentCallback={this.handleCallback} />
-            <SSD key={computerParts[7]} parentCallback={this.handleCallback} />
-            <PSU key={computerParts[8]} parentCallback={this.handleCallback} />
+            {computerParts.map((data) => (
+              <Components
+                key={data[0]}
+                header={data[0]}
+                ur={data[1]}
+                component={data[2]}
+                parentCallback={this.handleCallback}
+              />
+            ))}
           </div>
           {/* row row-cols-sm-2 row-cols-md-3 */}
           <div className='row mx-0 mb-2 justify-content-center'>
