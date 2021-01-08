@@ -1,5 +1,7 @@
 # PCBuilder
 
+Hosted on Heroku: https://easycomputerbuilder.herokuapp.com/ <br>
+
 API is hosted on Heroku at: https://floating-brushlands-50137.herokuapp.com/ <br>
 Link for API source code: https://github.com/DannyNguyenCode/computerAPI
 
