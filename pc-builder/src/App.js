@@ -162,7 +162,7 @@ class App extends React.Component {
               <Components
                 key={data[0]}
                 header={data[0]}
-                ur={data[1]}
+                url={data[1]}
                 component={data[2]}
                 parentCallback={this.handleCallback}
               />
