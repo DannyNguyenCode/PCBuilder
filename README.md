@@ -3,7 +3,7 @@
 Hosted on Heroku: https://easycomputerbuilder.herokuapp.com/ <br>
 
 API is now hosted on https://componentsapi.herokuapp.com/ <br>
-Have not/will probably not post source code for new API <br>
+Link to new API source code: https://github.com/DannyNguyenCode/postgresHeroku <br>
 ~~API is hosted on Heroku at: https://floating-brushlands-50137.herokuapp.com/~~<br>
 ~~Link for API source code: https://github.com/DannyNguyenCode/computerAPI~~
 
