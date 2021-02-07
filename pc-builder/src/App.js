@@ -60,53 +60,45 @@ class App extends React.Component {
     const computerParts = [
       [
         'Central Processing Unit',
-        'https://floating-brushlands-50137.herokuapp.com/amdprocessors',
+        'https://componentsapi.herokuapp.com/amdprocessors',
         'cpu',
       ],
 
-      [
-        'Motherboard',
-        'https://floating-brushlands-50137.herokuapp.com/amdmobos',
-        'mobo',
-      ],
+      ['Motherboard', 'https://componentsapi.herokuapp.com/amdmobos', 'mobo'],
 
       [
         'Random Access Memory',
-        'https://floating-brushlands-50137.herokuapp.com/ddr4rams',
+        'https://componentsapi.herokuapp.com/ddr4rams',
         'ram',
       ],
 
-      ['Case', 'https://floating-brushlands-50137.herokuapp.com/cases', 'case'],
+      ['Case', 'https://componentsapi.herokuapp.com/cases', 'case'],
 
       [
         'Cooling',
-        'https://floating-brushlands-50137.herokuapp.com/cpufansheatsinks',
+        'https://componentsapi.herokuapp.com/cpufansheatsinks',
         'cooling',
       ],
 
       [
         'Graphics Processing Unit',
-        'https://floating-brushlands-50137.herokuapp.com/nvidiagpus',
+        'https://componentsapi.herokuapp.com/nvidiagpus',
         'gpu',
       ],
 
       [
         'Hard Disk Drive',
-        'https://floating-brushlands-50137.herokuapp.com/harddiskdrives',
+        'https://componentsapi.herokuapp.com/harddiskdrives',
         'hdd',
       ],
 
       [
         'Solid State Drive',
-        'https://floating-brushlands-50137.herokuapp.com/nvmessds',
+        'https://componentsapi.herokuapp.com/nvmessds',
         'ssd',
       ],
 
-      [
-        'Power Supply Unit',
-        'https://floating-brushlands-50137.herokuapp.com/psus',
-        'psu',
-      ],
+      ['Power Supply Unit', 'https://componentsapi.herokuapp.com/psus', 'psu'],
     ];
 
     return (

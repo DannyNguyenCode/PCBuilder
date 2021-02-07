@@ -14,7 +14,7 @@ class Form extends React.Component {
       this.setState({ price: 'Select Name for Price' });
       this.props.cardCallBack(event, '', '$00.00');
     } else {
-      this.setState({ price: option.price });
+      this.setState({ price: option.price.trim() });
       this.props.cardCallBack(event, option.name, option.price);
     }
   };
@@ -42,7 +42,7 @@ class Form extends React.Component {
                     id={data.name.toLowerCase()}
                     value={data.name.toLowerCase()}
                   >
-                    {data.name}
+                    {data.name.trim()}
                   </option>
                 );
               })}
