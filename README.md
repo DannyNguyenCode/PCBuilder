@@ -37,6 +37,7 @@ The web service was built using **Node.js** as the back end. <br>
 #### Database
 
 **MongoDB** was used to hold the data in a database. <br>
+**Postgres** new platofrm to hold database <br>
 
 #### Data <br>
 
